@@ -1,221 +1,33 @@
 ---
-title: Text and Typography
-author: Cotes Chung
-date: 2019-08-08 11:33:00 +0800
-categories: [Blogging, Demo]
-tags: [typography]
+title: 깃 기본 명령어
+author: kimsangtak
+date: 2021-08-24 21:22:00 +0800
+categories: [Blogging, Tutorial]
+tags: [git]]
 math: true
 mermaid: true
-image:
-  src: https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/commons/devices-mockup.png
-  width: 850
-  height: 585
+
+---
+## git 올리는방법
 ---
 
-This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
 
+git 로그인하기 위해서
+git config --global user.name "honggildong"
+git config --global user.email honggildong@example.com
+* global 옵션은 git의 전역설정
 
-## Titles
----
-# H1 - heading
+프로젝트를 시작하고 git으로 관리를 하려면 사용하고자하는 로컬의 디렉토리로 가서
+git init 명령어를 입력하게 되면 로컬의 디렉토리에 .git 이란 숨겨진폴더가 생성된다
 
-<h2 data-toc-skip>H2 - heading</h2>
+git remote add origin 깃허브 주소
+* origin이란 별칭으로 사용하겠다는 뜻
+* git remote -v 명령어 시 별칭 입력한 주소 나옴
 
-<h3 data-toc-skip>H3 - heading</h3>
+git add .
+git commit -m '커밋내용'
+git push origin master
 
-<h4>H4 - heading</h4>
----
-<br>
 
-## Paragraph
+아직 미숙하지만 더욱더 많이 써보고 포스팅을 늘리도록하겠습니다.
 
-I wandered lonely as a cloud
-
-That floats on high o'er vales and hills,
-
-When all at once I saw a crowd,
-
-A host, of golden daffodils;
-
-Beside the lake, beneath the trees,
-
-Fluttering and dancing in the breeze.
-
-## Lists
-
-### Ordered list
-
-1. Firstly
-2. Secondly
-3. Thirdly
-
-### Unordered list
-
-- Chapter
-	- Section
-      - Paragraph
-
-### Task list
-
-- [ ] TODO
-- [x] Completed
-- [ ] Defeat COVID-19
-  - [x] Vaccine production
-  - [ ] Economic recovery
-  - [ ] People smile again
-
-### Description list
-
-Sun
-: the star around which the earth orbits
-
-Moon
-: the natural satellite of the earth, visible by reflected light from the sun
-
-
-## Block Quote
-
-> This line to shows the Block Quote.
-
-## Tables
-
-| Company                      | Contact          | Country |
-|:-----------------------------|:-----------------|--------:|
-| Alfreds Futterkiste          | Maria Anders     | Germany |
-| Island Trading               | Helen Bennett    | UK      |
-| Magazzini Alimentari Riuniti | Giovanni Rovelli | Italy   |
-
-## Links
-
-<http://127.0.0.1:4000>
-
-
-## Footnote
-
-Click the hook will locate the footnote[^footnote], and here is another footnote[^fn-nth-2].
-
-
-## Images
-
-- Default (with caption)
-
-![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png){: width="972" height="589" }
-_Full screen width and center alignment_
-
-<br>
-
-- Shadow
-
-![Window shadow](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/window.png){: .shadow width="1548" height="864" style="max-width: 90%" }
-_shadow effect (visible in light mode)_
-
-<br>
-
-- Left aligned
-
-![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png){: width="972" height="589" style="max-width: 70%" .normal}
-
-<br>
-
-- Float to left
-
-  ![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png){: width="972" height="589" style="max-width: 200px" .left}
-  "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
-
-<br>
-
-- Float to right
-
-  ![Desktop View](https://cdn.jsdelivr.net/gh/cotes2020/chirpy-images/posts/20190808/mockup.png){: width="972" height="589" style="max-width: 200px" .right}
-  "A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space. A repetitive and meaningless text is used to fill the space."
-
-<br>
-
-## Mermaid SVG
-
-```mermaid
- gantt
-  title  Adding GANTT diagram functionality to mermaid
-  apple :a, 2017-07-20, 1w
-  banana :crit, b, 2017-07-23, 1d
-  cherry :active, c, after b a, 1d
-```
-
-
-## Mathematics
-
-The mathematics powered by [**MathJax**](https://www.mathjax.org/):
-
-$$ \sum_{n=1}^\infty 1/n^2 = \frac{\pi^2}{6} $$
-
-When $a \ne 0$, there are two solutions to $ax^2 + bx + c = 0$ and they are
-
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
-
-
-## Inline code
-
-This is an example of `Inline Code`.
-
-
-## Code block
-
-### Common
-
-```
-This is a common code snippet, without syntax highlight and line number.
-```
-
-### Specific Languages
-
-#### Console
-
-```console
-$ env |grep SHELL
-SHELL=/usr/local/bin/bash
-PYENV_SHELL=bash
-```
-
-#### Ruby
-
-```ruby
-def sum_eq_n?(arr, n)
-  return true if arr.empty? && n == 0
-  arr.product(arr).reject { |a,b| a == b }.any? { |a,b| a + b == n }
-end
-```
-
-#### Shell
-
-```shell
-if [ $? -ne 0 ]; then
-    echo "The command was not successful.";
-    #do the needful / exit
-fi;
-```
-
-#### Liquid
-
-{% raw %}
-```liquid
-{% if product.title contains 'Pack' %}
-  This product's title contains the word Pack.
-{% endif %}
-```
-{% endraw %}
-
-#### Java
-
-```java
-private void writeObject(java.io.ObjectOutputStream s)
-  throws java.io.IOException {
-  // Write out any hidden serialization magic
-  s.defaultWriteObject();
-  for (E e: map.keySet()) s.writeObject(e);
-}
-```
-
-## Reverse Footnote
-
-[^footnote]: The footnote source
-[^fn-nth-2]: The 2nd footnote source
