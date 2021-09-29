@@ -3,7 +3,7 @@ title: 코딩테스트 연습 > 스택/큐 >  주식가격
 
 
 author: kimsangtak
-date: 2021-09-10 20:48:00 +0800
+date: 2021-09-11 20:48:00 +0800
 categories: [programmers,stack]
 tags: [programmers,프로그래머스,stack,스택,큐,주식가격, 테스트케이스]
 math: true
